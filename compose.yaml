@@ -1,0 +1,10 @@
+services:
+  hunter:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    command: ["python", "monitor.py", "--data", "/data", "--send-telegram", "--target", "50", "--interval-seconds", "900"]
+    volumes:
+      - hunter-state:/data
+volumes:
+  hunter-state:

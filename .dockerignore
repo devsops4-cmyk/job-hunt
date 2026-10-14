@@ -1,0 +1,6 @@
+.env
+.git
+reports
+monitor-data
+__pycache__
+*.sqlite3
